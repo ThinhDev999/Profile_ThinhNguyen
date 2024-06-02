@@ -1,0 +1,304 @@
+.bg-stars {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.bg-stars.dart-mode {
+  background-color: #000;
+}
+.bg-stars.light-mode {
+  background-color: #fff;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 5%;
+}
+
+.header .logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+.bg-stars.dart-mode .header .logo {
+  color: #fff;
+}
+.bg-stars.dart-mode .logo .thinh {
+  color: #00ffff; /* Thay đổi màu chữ thành màu xanh cho từ "thinh" */
+}
+
+.bg-stars.light-mode .header .logo {
+  color: #000;
+}
+.bg-stars.light-mode .logo .thinh {
+  color: #2aabd5; /* Thay đổi màu chữ thành màu xanh cho từ "thinh" */
+}
+
+.header .nav {
+  display: flex;
+  align-items: center;
+  margin-right: -20%;
+}
+
+.header .nav a {
+  font-size: 18px;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  /* In đậm chữ */
+}
+.bg-stars.dart-mode .header .nav a {
+  color: #fff;
+}
+.bg-stars.light-mode .header .nav a {
+  color: #000;
+}
+
+.bg-stars.dart-mode .header .nav a:hover {
+  color: #00ffff;
+}
+.bg-stars.light-mode .header .nav a:hover {
+  color: #2aabd5;
+}
+
+.header .moon-icon {
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 20%;
+}
+.bg-stars.dart-mode .header .moon-icon {
+  color: #00ffff;
+}
+.bg-stars.light-mode .header .moon-icon {
+  color: #000;
+}
+
+/* click vao chu  thay doi mau phan   <nav class="nav"> */
+.bg-stars.dart-mode .clicked_toi {
+  color: #00ffff !important; /* Màu cam sáng */
+}
+
+.bg-stars.light-mode .clicked_sang {
+  color: #2aabd5 !important; /* Màu cam sáng */
+}
+
+/* #night-sky {
+  width: 100%;
+  height: 100%;
+   background-color: #000; 
+  position: relative;
+} */
+
+.bg-stars.dart-mode .star {
+  width: 1px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  animation: twinkle 1s infinite alternate;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* padding: 0px 0px 0px 5%; */
+}
+.bg-stars.dart-mode .main {
+  color: #ffffff;
+}
+
+.bg-stars.light-mode .main {
+  color: #000;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between; /* Căn các phần tử theo cả hai bên */
+  align-items: center; /* Căn các phần tử theo trục dọc */
+  padding: 0 0 0 2%;
+}
+
+.info {
+  flex: 1; /* Sử dụng toàn bộ không gian còn lại trong container */
+  padding: 20px; /* Thêm khoảng cách giữa các phần tử trong info */
+}
+
+.info > * {
+  margin-bottom: 20px; /* Khoảng cách giữa các thẻ */
+}
+
+.info h3 {
+  font-size: 25px;
+}
+
+.bg-stars.dart-mode #typing-effect {
+  color: #fff;
+  text-shadow: 0 0 5px #29e9e9, /* Viền màu xanh */ 0 0 5px #29e9e9,
+    /* Viền màu xanh */ 0 0 5px #29e9e9, /* Viền màu xanh */ 0 0 5px #29e9e9; /* Viền màu xanh */
+}
+
+.bg-stars.light-mode #typing-effect {
+  color: #fff;
+  text-shadow: 0 0 5px #2aabd5, 0 0 5px #2aabd5, 0 0 5px #2aabd5,
+    0 0 5px #2aabd5;
+}
+
+.info h2 {
+  margin-bottom: -20px;
+}
+
+.info h1 {
+  font-size: 56px;
+}
+.bg-stars.dart-mode .info h1 {
+  color: #00ffff;
+}
+
+.bg-stars.light-mode .info h1 {
+  color: #2aabd5;
+}
+.info p {
+}
+.social-icons {
+  display: flex;
+  flex-direction: column; /* Đặt các biểu tượng thành cột */
+  align-items: center; /* Căn các biểu tượng theo trục dọc */
+}
+.social-icons a {
+  /* margin: auto; */
+  margin-bottom: 80%;
+}
+
+.social-icons a i {
+  font-size: 24px;
+  margin-right: 10px;
+
+  border-radius: 50%; /* Đặt viền thành hình tròn */
+  padding: 10px; /* Khoảng cách giữa biểu tượng và viền */
+}
+
+.bg-stars.dart-mode .social-icons a i {
+  color: #00ffff;
+
+  border: 2px solid #00ffff; /* Màu và độ dày của viền */
+}
+
+.bg-stars.light-mode .social-icons a i {
+  color: #2aabd5;
+
+  border: 2px solid #2aabd5; /* Màu và độ dày của viền */
+}
+
+.bg-stars.dart-mode .social-icons a i:hover {
+  background-color: #00ffff;
+  /* color: #000000; */
+  color: #ffff;
+}
+.bg-stars.light-mode .social-icons a i:hover {
+  background-color: #2aabd5;
+
+  color: #ffff;
+}
+
+.image-container {
+}
+.profile-picture {
+  width: 500px; /* Điều chỉnh kích thước ảnh đại diện */
+  height: 550px; /* Điều chỉnh kích thước ảnh đại diện */
+  border-radius: 50%; /* Làm viền tròn */
+
+  margin: 20% 0;
+
+  /* filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5)); */
+}
+
+.bg-stars.dart-mode .profile-picture {
+  box-shadow: 0 0 600px #00ffff; /* Thêm hiệu ứng bóng sáng màu #00FFFF */
+
+  border: 3px solid #00ffff;
+  /* filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5)); */
+}
+
+.bg-stars.light-mode .profile-picture {
+  box-shadow: 0 0 600px #2aabd5; /* Thêm hiệu ứng bóng sáng màu #00FFFF */
+
+  border: 3px solid #2aabd5;
+  /* filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5)); */
+}
+
+.button-container {
+  width: 260px;
+  display: flex;
+  justify-content: center; /* Căn giữa nút button */
+  margin-top: 20px; /* Khoảng cách giữa nút và nội dung */
+  background-color: transparent;
+  border-radius: 50px;
+}
+
+.bg-stars.dart-mode .button-container {
+  border: solid 2px #00ffff;
+}
+
+.bg-stars.light-mode .button-container {
+  border: solid 2px #2aabd5;
+}
+
+.button {
+  width: 100%;
+  position: relative;
+  display: inline-block;
+  padding: 15px 20px;
+
+  text-decoration: none;
+  font-weight: bolder;
+  text-align: center;
+  background-color: transparent;
+  overflow: hidden; /* Ẩn phần dư thừa của đường chéo */
+}
+
+.bg-stars.dart-mode .button {
+  color: #00ffff;
+}
+
+.bg-stars.light-mode .button {
+  color: #2aabd5;
+}
+.button1 {
+  border-radius: 50px 0px 0px 50px;
+}
+
+.bg-stars.dart-mode .button1 {
+  border-right: solid 3px #00ffff;
+}
+.bg-stars.light-mode .button1 {
+  border-right: solid 3px #2aabd5;
+}
+.button2 {
+  border-radius: 0px 50px 50px 0px;
+}
+
+.bg-stars.dart-mode .button:hover {
+  background-color: #00ffff;
+  color: #ffffff;
+}
+.bg-stars.light-mode .button:hover {
+  background-color: #2aabd5;
+  color: #ffffff;
+}

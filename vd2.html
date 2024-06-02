@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Page Loader</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        nav {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #content {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="#" onclick="loadPage('home', 'home')">Home</a></li>
+                <li><a href="#" onclick="loadPage('about', 'about')">About</a></li>
+                <li><a href="#" onclick="loadPage('contact', 'contact')">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="content">
+            <!-- Content will be loaded here -->
+            <h2>Welcome!</h2>
+            <p>Please click the links above to load content.</p>
+        </div>
+    </div>
+    <script>
+        function loadPage(page, url) {
+            fetch(page + '.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('content').innerHTML = data;
+                    history.pushState({ page: page }, '', url);
+                })
+                .catch(error => {
+                    document.getElementById('content').innerHTML = '<p>Error loading page. Please try again later.</p>';
+                });
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
