@@ -317,6 +317,33 @@
   color: #000;
 }
 @media (max-width: 768px) {
+.header .logo {
+    font-size: 20px; /* Giảm kích thước font chữ của logo */
+  }
+  .profile-picture {
+    width: 60vw; /* Chiều rộng của ảnh đại diện là 60% chiều rộng của màn hình */
+    height: calc(
+      60vw * 1.1
+    ); /* Chiều cao của ảnh đại diện được tính dựa trên tỉ lệ 16:9 */
+    border-radius: 50%; /* Làm viền tròn */
+    margin: 20% auto; /* Canh giữa theo chiều ngang và căn lề trên dưới */
+  }
+  .info h1 {
+    font-size: 40px; /* Giảm kích thước của tiêu đề lớn */
+  }
+
+  .info h3 {
+    font-size: 20px; /* Giảm kích thước của tiêu đề nhỏ */
+  }
+  .social-icons a i {
+    font-size: 20px;
+  }
+  .button-container {
+    width: 220px;
+  }
+  .container {
+    padding: 0 2%; /* Căn lề bên trái và bên phải của container */
+  }
   .main {
     z-index: 0;
     flex-direction: column-reverse;
