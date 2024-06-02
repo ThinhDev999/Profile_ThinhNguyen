@@ -317,7 +317,7 @@
 .bg-stars.light-mode .menu-icon i {
   color: #000;
 }
-@media (max-width: 560px) {
+@media (max-width: 768px) {
 .header .logo {
     font-size: 20px; /* Giảm kích thước font chữ của logo */
   }
