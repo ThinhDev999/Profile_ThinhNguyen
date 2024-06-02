@@ -302,3 +302,70 @@
   background-color: #2aabd5;
   color: #ffffff;
 }
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon i {
+  font-size: 24px;
+}
+.bg-stars.dart-mode .menu-icon i {
+  color: #fff;
+}
+.bg-stars.light-mode .menu-icon i {
+  color: #000;
+}
+@media (max-width: 768px) {
+  .main {
+    z-index: 0;
+    flex-direction: column-reverse;
+    /* text-align: star; */
+  }
+  .menu-icon {
+    display: block;
+  }
+
+  .header .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* Điều chỉnh tùy thuộc vào chiều cao header */
+    left: 0px;
+
+    width: 100%;
+    height: 800px;
+
+    z-index: 1;
+  }
+  .bg-stars.dart-mode .header .nav {
+    background-color: rgba(0, 0, 0, 0.9); /* Màu nền của menu */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Tăng độ bóng */
+  }
+  .bg-stars.light-mode .header .nav {
+    background-color: rgba(238, 236, 236, 0.8); /* Màu nền của menu */
+    box-shadow: 0 4px 20px rgba(224, 222, 222, 0.855); /* Tăng độ bóng */
+  }
+
+  .header #nav-menu a {
+    margin-top: 10px;
+    margin-left: 55px;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+  }
+
+  .header .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Hiển thị menu khi được nhấp vào */
+  .header .nav.active {
+    display: flex;
+  }
+}
+
