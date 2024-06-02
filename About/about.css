@@ -316,9 +316,9 @@
 .bg-stars.light-mode .menu-icon i {
   color: #000;
 }
-@media (max-width: 768px) {
-.header .logo {
-    font-size: 20px; /* Giảm kích thước font chữ của logo */
+@media (max-aspect-ratio: 9/16) {
+  .header .logo {
+    font-size: 15px; /* Giảm kích thước font chữ của logo */
   }
   .profile-picture {
     width: 60vw; /* Chiều rộng của ảnh đại diện là 60% chiều rộng của màn hình */
