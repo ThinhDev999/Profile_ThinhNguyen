@@ -303,56 +303,7 @@
   color: #ffffff;
 }
 
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    padding: 10px 0;
-  }
 
-  .nav {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .main {
-    flex-direction: column;
-    padding-top: 80px;
-  }
-
-  .button-container {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .image-container {
-    display: block;
-    margin-top: 20px;
-  }
-
-  .social-icons {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .social-icons a {
-    margin: 0 5px;
-  }
-}
-.menu-icon {
-  display: none;
-  cursor: pointer;
-}
-
-.menu-icon i {
-  font-size: 24px;
-}
-.bg-stars.dart-mode .menu-icon i {
-  color: #fff;
-}
-.bg-stars.light-mode .menu-icon i {
-  color: #000;
-}
 @media (max-width: 768px) {
   .main {
     z-index: 0;
