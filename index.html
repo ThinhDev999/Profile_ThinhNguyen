@@ -20,14 +20,17 @@
 
     </div>
     <header class="header">
+         <div class="menu-icon" id="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
         <span class="logo">
             <span class="thinh">Thinh</span>
             <span class="nguyen">Nguyen</span>
         </span>
 
-        <nav class="nav">
-            <a href="" id="home-link" class="clicked_toi">Home</a>
-            <a href="About/about.html" id="about-link">About</a>
+        <nav class="nav nen_nav_menu_toi" id="nav-menu">
+            <a href="TrangChu.html" id="home-link" class="clicked_toi">Home</a>
+            <a href="/About/about.html" id="about-link">About</a>
             <a href="#">Skills</a>
             <a href="#">Portfolio</a>
             <a href="#">Contact</a>
@@ -84,6 +87,14 @@
 
 
     <script src="TrangChu/Trangchu.js">
+
+    </script>
+<script>
+        $(document).ready(function () {
+            $('#menu-icon').on('click', function () {
+                $('#nav-menu').toggleClass('active');
+            });
+        });
 
     </script>
 
