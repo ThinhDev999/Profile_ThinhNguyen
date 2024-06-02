@@ -303,7 +303,20 @@
   color: #ffffff;
 }
 
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
 
+.menu-icon i {
+  font-size: 24px;
+}
+.bg-stars.dart-mode .menu-icon i {
+  color: #fff;
+}
+.bg-stars.light-mode .menu-icon i {
+  color: #000;
+}
 @media (max-width: 768px) {
   .main {
     z-index: 0;
