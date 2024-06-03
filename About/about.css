@@ -404,6 +404,7 @@
   }
 
   .header .logo {
+    font-size: 18px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
