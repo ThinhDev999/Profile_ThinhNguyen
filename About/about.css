@@ -21,6 +21,13 @@
   align-items: center;
   padding: 30px 5%;
 }
+.bg-stars.dart-mode .header {
+  background-color: rgb(57, 54, 54, 0.3);
+}
+
+.bg-stars.light-mode .header {
+  background-color: rgb(237, 237, 237, 0.3);
+}
 
 .header .logo {
   font-size: 30px;
@@ -74,6 +81,9 @@
   margin-left: 20%;
 }
 .bg-stars.dart-mode .header .moon-icon {
+  text-shadow: 0 0 15px #2fcccc;
+}
+.bg-stars.dart-mode .header .moon-icon {
   color: #00ffff;
 }
 .bg-stars.light-mode .header .moon-icon {
@@ -115,10 +125,7 @@
 }
 
 .main {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  /* padding: 0px 0px 0px 5%; */
+  margin-bottom: 50px;
 }
 .bg-stars.dart-mode .main {
   color: #ffffff;
@@ -128,180 +135,6 @@
   color: #000;
 }
 
-.container {
-  display: flex;
-  justify-content: space-between; /* Căn các phần tử theo cả hai bên */
-  align-items: center; /* Căn các phần tử theo trục dọc */
-  padding: 0 0 0 2%;
-}
-
-.info {
-  flex: 1; /* Sử dụng toàn bộ không gian còn lại trong container */
-  padding: 20px; /* Thêm khoảng cách giữa các phần tử trong info */
-}
-
-.info > * {
-  margin-bottom: 20px; /* Khoảng cách giữa các thẻ */
-}
-
-.info h3 {
-  font-size: 25px;
-}
-
-.bg-stars.dart-mode #typing-effect {
-  color: #fff;
-  text-shadow: 0 0 5px #29e9e9, /* Viền màu xanh */ 0 0 5px #29e9e9,
-    /* Viền màu xanh */ 0 0 5px #29e9e9, /* Viền màu xanh */ 0 0 5px #29e9e9; /* Viền màu xanh */
-}
-
-.bg-stars.light-mode #typing-effect {
-  color: #fff;
-  text-shadow: 0 0 5px #2aabd5, 0 0 5px #2aabd5, 0 0 5px #2aabd5,
-    0 0 5px #2aabd5;
-}
-
-.info h2 {
-  margin-bottom: -20px;
-}
-
-.info h1 {
-  font-size: 56px;
-}
-.bg-stars.dart-mode .info h1 {
-  color: #00ffff;
-}
-
-.bg-stars.light-mode .info h1 {
-  color: #2aabd5;
-}
-.info p {
-}
-.social-icons {
-  display: flex;
-  flex-direction: column; /* Đặt các biểu tượng thành cột */
-  align-items: center; /* Căn các biểu tượng theo trục dọc */
-}
-.social-icons a {
-  /* margin: auto; */
-  margin-bottom: 80%;
-}
-
-.social-icons a i {
-  font-size: 24px;
-  margin-right: 10px;
-
-  border-radius: 50%; /* Đặt viền thành hình tròn */
-  padding: 10px; /* Khoảng cách giữa biểu tượng và viền */
-}
-
-.bg-stars.dart-mode .social-icons a i {
-  color: #00ffff;
-
-  border: 2px solid #00ffff; /* Màu và độ dày của viền */
-}
-
-.bg-stars.light-mode .social-icons a i {
-  color: #2aabd5;
-
-  border: 2px solid #2aabd5; /* Màu và độ dày của viền */
-}
-
-.bg-stars.dart-mode .social-icons a i:hover {
-  background-color: #00ffff;
-  /* color: #000000; */
-  color: #ffff;
-}
-.bg-stars.light-mode .social-icons a i:hover {
-  background-color: #2aabd5;
-
-  color: #ffff;
-}
-
-.image-container {
-}
-.profile-picture {
-  width: 500px; /* Điều chỉnh kích thước ảnh đại diện */
-  height: 550px; /* Điều chỉnh kích thước ảnh đại diện */
-  border-radius: 50%; /* Làm viền tròn */
-
-  margin: 20% 0;
-
-  /* filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5)); */
-}
-
-.bg-stars.dart-mode .profile-picture {
-  box-shadow: 0 0 600px #00ffff; /* Thêm hiệu ứng bóng sáng màu #00FFFF */
-
-  border: 3px solid #00ffff;
-  /* filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5)); */
-}
-
-.bg-stars.light-mode .profile-picture {
-  box-shadow: 0 0 600px #2aabd5; /* Thêm hiệu ứng bóng sáng màu #00FFFF */
-
-  border: 3px solid #2aabd5;
-  /* filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5)); */
-}
-
-.button-container {
-  width: 260px;
-  display: flex;
-  justify-content: center; /* Căn giữa nút button */
-  margin-top: 20px; /* Khoảng cách giữa nút và nội dung */
-  background-color: transparent;
-  border-radius: 50px;
-}
-
-.bg-stars.dart-mode .button-container {
-  border: solid 2px #00ffff;
-}
-
-.bg-stars.light-mode .button-container {
-  border: solid 2px #2aabd5;
-}
-
-.button {
-  width: 100%;
-  position: relative;
-  display: inline-block;
-  padding: 15px 20px;
-
-  text-decoration: none;
-  font-weight: bolder;
-  text-align: center;
-  background-color: transparent;
-  overflow: hidden; /* Ẩn phần dư thừa của đường chéo */
-}
-
-.bg-stars.dart-mode .button {
-  color: #00ffff;
-}
-
-.bg-stars.light-mode .button {
-  color: #2aabd5;
-}
-.button1 {
-  border-radius: 50px 0px 0px 50px;
-}
-
-.bg-stars.dart-mode .button1 {
-  border-right: solid 3px #00ffff;
-}
-.bg-stars.light-mode .button1 {
-  border-right: solid 3px #2aabd5;
-}
-.button2 {
-  border-radius: 0px 50px 50px 0px;
-}
-
-.bg-stars.dart-mode .button:hover {
-  background-color: #00ffff;
-  color: #ffffff;
-}
-.bg-stars.light-mode .button:hover {
-  background-color: #2aabd5;
-  color: #ffffff;
-}
 .menu-icon {
   display: none;
   cursor: pointer;
@@ -316,37 +149,224 @@
 .bg-stars.light-mode .menu-icon i {
   color: #000;
 }
-@media (max-width: 768px) {
-  .header .logo {
-    font-size: 20px; /* Giảm kích thước font chữ của logo */
-  }
-  .profile-picture {
-    width: 60vw; /* Chiều rộng của ảnh đại diện là 60% chiều rộng của màn hình */
-    height: calc(
-      60vw * 1.1
-    ); /* Chiều cao của ảnh đại diện được tính dựa trên tỉ lệ 16:9 */
-    border-radius: 50%; /* Làm viền tròn */
-    margin: 20% auto; /* Canh giữa theo chiều ngang và căn lề trên dưới */
-  }
-  .info h1 {
-    font-size: 28px; /* Giảm kích thước của tiêu đề lớn */
-  }
 
-  .info h3 {
-    font-size: 18px; /* Giảm kích thước của tiêu đề nhỏ */
+.main {
+  font-family: "Arial", sans-serif;
+  max-width: 100%;
+  /* max-width: 800px;
+  margin: 0 auto;
+  padding: 20px; */
+}
+.about-me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.about-me h1 {
+  margin-right: 10px;
+}
+
+.about-me hr {
+  flex-grow: 1;
+  border: 0;
+
+  margin: 0;
+}
+.bg-stars.dart-mode .about-me hr {
+  border-top: 2px solid #55e3e3;
+}
+
+.bg-stars.light-mode .about-me hr {
+  border-top: 2px solid #2aabd5;
+}
+.intro {
+  margin: auto;
+  width: 55%;
+  height: 40%;
+  margin-top: 20px;
+
+  border-radius: 10px;
+  padding: 15px 30px 50px 40px;
+  /* display: flex;
+  align-items: center;
+  margin-bottom: 20px; */
+}
+.bg-stars.dart-mode .intro {
+  background-color: rgba(60, 57, 57, 0.5);
+}
+.bg-stars.light-mode .intro {
+  background-color: rgb(237, 237, 237, 0.5);
+}
+.intro-content {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+}
+.bg-stars.dart-mode .profile-img {
+  border: solid 5px rgba(80, 235, 232, 0.9);
+}
+.bg-stars.light-mode .profile-img {
+  border: solid 5px rgba(85, 183, 228, 0.9);
+}
+.intro-text {
+  max-width: 600px;
+}
+
+.skills {
+  margin-top: 20px;
+}
+
+.skills-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin: auto;
+
+  max-width: 59%;
+  position: relative;
+  margin-top: 35px;
+}
+
+.skills-header h2 {
+  margin: 0 10px;
+}
+
+.skills-header .dashed1 {
+  flex-grow: 1;
+  margin-right: 5px;
+}
+
+.skills-header .dashed2 {
+  flex-grow: 15;
+  margin-left: 5px;
+}
+@keyframes brightEffect {
+  0% {
+    background-color: rgba(255, 255, 255, 0); /* Màu trong suốt */
   }
-  .social-icons a i {
-    font-size: 20px;
+  50% {
+    background-color: rgb(24, 176, 181); /* Màu sáng */
   }
-  .button-container {
-    width: 220px;
+  100% {
+    background-color: rgba(255, 255, 255, 0); /* Màu trong suốt */
   }
-  .container {
-    padding: 0 2%; /* Căn lề bên trái và bên phải của container */
+}
+@keyframes brightEffect2 {
+  0% {
+    background-color: rgba(255, 255, 255, 0); /* Màu trong suốt */
   }
+  50% {
+    background-color: rgb(41, 152, 216); /* Màu sáng */
+  }
+  100% {
+    background-color: rgba(255, 255, 255, 0); /* Màu trong suốt */
+  }
+}
+
+/* Áp dụng hiệu ứng cho .dashed */
+.skills-header .dashed {
+  border: 0;
+  border-top: 2px dashed transparent; /* Đặt màu trong suốt cho nét đứt */
+  position: relative;
+}
+.bg-stars.dart-mode .skills-header .dashed {
+  animation: brightEffect 2s linear infinite; /* Áp dụng animation */
+}
+.bg-stars.light-mode .skills-header .dashed {
+  animation: brightEffect2 2s linear infinite; /* Áp dụng animation */
+}
+.skills-container {
+  margin: auto;
+  width: 59%;
+  margin-top: 16px;
+}
+.skills-container .category {
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
+  /* margin-left: 100px; */
+}
+.skills-container .category .skills-category {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.skills-container .category .skills-category h3:hover {
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 8px;
+  /* box-shadow: 60 60 60px rgba(62, 61, 61, 0.8); */
+}
+.bg-stars.dart-mode .skills-container .category .skills-category h3:hover {
+  border: solid 2px rgba(62, 61, 61, 0.8);
+}
+.bg-stars.light-mode .skills-container .category .skills-category h3:hover {
+  border: solid 2px rgba(21, 162, 205, 0.8);
+}
+.skills-container .category .skills-category h3 {
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.bg-stars.light-mode .ActiveCategory {
+  background-color: rgba(21, 162, 205, 0.8);
+  color: #fff;
+}
+.bg-stars.dart-mode .ActiveCategory {
+  background-color: rgba(62, 61, 61, 0.8);
+}
+.skills-list .item {
+  /* padding: 15px 20px; */
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center; /* Canh theo trục dọc */
+  justify-content: center; /* Canh theo trục ngang */
+}
+.bg-stars.light-mode .skills-list .item {
+  border: 2px solid rgba(21, 162, 205, 0.8);
+}
+.bg-stars.dart-mode .skills-list .item {
+  border: 2px solid #93b6b6;
+}
+.skills-list .item img {
+  width: 20px;
+  height: 20px;
+  border-radius: 50px;
+  order: -1;
+  margin-right: 10px;
+}
+
+.skills-list.technologies {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+
+.skills-list.Tools {
+  display: none;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 30px;
+}
+
+.skills-list {
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
   .main {
     z-index: 0;
-    flex-direction: column-reverse;
+    /* flex-direction: column-reverse; */
     /* text-align: star; */
   }
   .menu-icon {
@@ -373,7 +393,6 @@
     background-color: rgba(238, 236, 236, 0.8); /* Màu nền của menu */
     box-shadow: 0 4px 20px rgba(224, 222, 222, 0.855); /* Tăng độ bóng */
   }
-
   .header #nav-menu a {
     margin-top: 10px;
     margin-left: 55px;
@@ -394,5 +413,27 @@
   .header .nav.active {
     display: flex;
   }
-}
 
+  .intro-content {
+    /* display: flex; */
+    flex-direction: column;
+  }
+  .intro-content img {
+    margin: auto;
+  }
+  .intro-content .intro-text {
+    margin: auto;
+    margin-top: 10px;
+  }
+
+  .skills-list.technologies {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+  .skills-list.Tools {
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+}
