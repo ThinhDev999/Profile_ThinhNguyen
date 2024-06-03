@@ -319,7 +319,7 @@
 }
 @media (max-width: 768px) {
   .header .logo {
-    font-size: 15px; /* Giảm kích thước font chữ của logo */
+    font-size: 20px; /* Giảm kích thước font chữ của logo */
   }
   .profile-picture {
     width: 60vw; /* Chiều rộng của ảnh đại diện là 60% chiều rộng của màn hình */
@@ -330,7 +330,7 @@
     margin: 20% auto; /* Canh giữa theo chiều ngang và căn lề trên dưới */
   }
   .info h1 {
-    font-size: 40px; /* Giảm kích thước của tiêu đề lớn */
+    font-size: 32px; /* Giảm kích thước của tiêu đề lớn */
   }
 
   .info h3 {
