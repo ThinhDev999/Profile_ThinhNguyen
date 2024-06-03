@@ -332,6 +332,9 @@
   .info h1 {
     font-size: 28px; /* Giảm kích thước của tiêu đề lớn */
   }
+  .info h1 {
+  font-size: 18px;
+  }
 
   .info h3 {
     font-size: 18px; /* Giảm kích thước của tiêu đề nhỏ */
