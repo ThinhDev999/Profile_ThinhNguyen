@@ -74,6 +74,9 @@
   margin-left: 20%;
 }
 .bg-stars.dart-mode .header .moon-icon {
+  text-shadow: 0 0 15px #2fcccc;
+}
+.bg-stars.dart-mode .header .moon-icon {
   color: #00ffff;
 }
 .bg-stars.light-mode .header .moon-icon {
