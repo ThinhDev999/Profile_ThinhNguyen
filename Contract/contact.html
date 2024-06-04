@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>ThinhNguyen - Game Developer</title>
+    <link rel="icon" href="../TaiNguyen/anh-dai-dien.png" type="image/png">
+
+</head>
+
+<body class="bg-stars dart-mode">
+    <div id="night-sky">
+        <div id="stars"></div>
+
+    </div>
+    <header class="header">
+        <div class="menu-icon" id="menu-icon">
+            <i class="fas fa-bars"></i>
+        </div>
+        <span class="logo">
+            <span class="thinh">Thinh</span>
+            <span class="nguyen">Nguyen</span>
+        </span>
+
+        <nav class="nav" id="nav-menu">
+            <a href="/TrangChu/TrangChu.html" id="home-link">Home</a>
+            <a href="../About/about.html" id="about-link">About</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Blog</a>
+            <a href="contact.html" id="contact-link" class="clicked_toi">Contact</a>
+        </nav>
+        <i class="fas fa-moon moon-icon" id="toggleDarkMode"></i>
+
+    </header>
+    <main class="main">
+        <div class="title-contact">
+            <h1> Feel Free To Contact Me Anytime: </h1>
+            <p>I'm always available to discuss products, collaboration opportunities or partnerships.
+                Please contact me through the contact channels listed below.</p>
+        </div>
+
+        <div class="contact-method">
+
+            <div class="item whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                <div class="information">
+                    <h3>Whatsapp</h3>
+                    <p>+84 866676922</p>
+                    <h4 class="send-message">Send Me A Message</h4>
+                </div>
+            </div>
+
+            <div class="item gmail">
+                <i class="fas fa-envelope"></i>
+                <div class="information">
+                    <h3>Gmail</h3>
+                    <p>nguyenvanthinh228866@gmail.com</p>
+                    <h4>Send Me A Message</h4>
+                </div>
+            </div>
+
+            <div class="item telegram">
+                <i class="fab fa-telegram"></i>
+                <div class="information">
+
+                    <h3>Telegram</h3>
+                    <p>+84 866676922</p>
+                    <h4>Send Me A Message</h4>
+                </div>
+            </div>
+
+        </div>
+        <div class="duong-thang">
+            <hr class="duong1">
+            <p>or</p>
+            <hr class="duong2">
+        </div>
+        <div id="contactForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" placeholder="Your First Name (e.g., John)" required>
+                    <div class="error hidden" id="firstNameError">Please enter your first name</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" placeholder="Your Last Name (e.g., Doe)" required>
+                    <div class="error hidden" id="lastNameError">Please enter your last name</div>
+                </div>
+
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your Email (e.g., example@example.com)" required>
+                    <div class="error hidden" id="emailError">Please enter a valid email</div>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" placeholder="Your Subject (e.g., Inquiry)" required>
+                    <div class="error hidden" id="subjectError">Please enter a subject</div>
+                </div>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Your Message (e.g., Hello! How can I help?)" required></textarea>
+                <div class="error hidden" id="messageError">Please enter your message</div>
+            </div>
+
+            <div class="form-group full-width">
+                <button type="submit" id="submitBtn">Submit <i class="fas fa-paper-plane"></i> </button>
+
+            </div>
+        </div>
+
+
+
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="contact.js">
+
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#menu-icon').on('click', function () {
+                $('#nav-menu').toggleClass('active');
+            });
+        });
+
+
+
+
+        $(document).ready(function () {
+
+
+            // Xử lý khi click vào phần Telegram
+            $('.telegram').click(function () {
+
+                window.open('https://t.me/Conruavang286');
+            });
+            $('.whatsapp').click(function () {
+
+                window.open('https://api.whatsapp.com/send?phone=' + '+84866676922');
+            });
+
+            $('.gmail').click(function () {
+
+                window.open('https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new');
+            });
+        });
+
+
+
+        $(document).ready(function () {
+            // Kiểm tra form mỗi khi người dùng nhập vào trường input
+            $("input, textarea").on("input", function () {
+                validateField($(this));
+            });
+
+            // Kiểm tra form khi người dùng nhấn nút Submit
+            $("#submitBtn").click(function (event) {
+                event.preventDefault();
+                validateForm();
+            });
+
+            function validateForm() {
+                resetErrors();
+
+                var firstName = $("#firstName").val().trim();
+                var lastName = $("#lastName").val().trim();
+                var email = $("#email").val().trim();
+                var subject = $("#subject").val().trim();
+                var message = $("#message").val().trim();
+
+                if (firstName === "") {
+                    showError("firstNameError");
+                    return;
+                }
+
+                if (lastName === "") {
+                    showError("lastNameError");
+                    return;
+                }
+
+                if (!isValidEmail(email)) {
+                    showError("emailError");
+                    return;
+                }
+
+                if (subject === "") {
+                    showError("subjectError");
+                    return;
+                }
+
+                if (message === "") {
+                    showError("messageError");
+                    return;
+                }
+
+                // Nếu tất cả các trường hợp đều hợp lệ, thực hiện submit form
+                sendEmail(firstName, lastName, email, subject, message);
+            }
+
+            function showError(errorId) {
+                $("#" + errorId).removeClass("hidden");
+                var inputId = errorId.replace("Error", "");
+                $("#" + inputId).addClass("error-border");
+            }
+
+            function resetErrors() {
+                $(".error").addClass("hidden");
+                $("input, textarea").removeClass("error-border");
+            }
+
+            function isValidEmail(email) {
+                // Simple email validation
+                var re = /\S+@\S+\.\S+/;
+                return re.test(email);
+            }
+
+            function validateField($field) {
+                var value = $field.val().trim();
+                var $errorDiv = $("#" + $field.attr("id") + "Error");
+                $errorDiv.addClass("hidden");
+                $field.removeClass("error-border");
+
+                if (value === "") {
+                    $errorDiv.removeClass("hidden");
+                    $field.addClass("error-border");
+                }
+            }
+            function sendEmail(firstName, lastName, email, subject, message) {
+                var emailBody = "Name: " + firstName + " " + lastName + "\nEmail: " + email + "\nMessage: " + message;
+                var gmailLink = "https://mail.google.com/mail/?view=cm&fs=1&to=nguyenvanthinh228866@gmail.com&su=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(emailBody);
+
+                // Mở một cửa sổ mới để gửi email thông qua Gmail
+                window.open(gmailLink, "_blank");
+
+                // Hiển thị thông báo thành công
+                //showAlert("Success", "Your message has been successfully sent!");
+            }
+
+
+            /*function showAlert(title, message) {
+                $("#alertTitle").text(title);
+                $("#alertMessage").text(message);
+                $("#alert").addClass("show");
+                setTimeout(function () {
+                    $("#alert").removeClass("show");
+                }, 3000); // ẩn alert sau 3 giây
+            } */
+        });
+
+
+    </script>
+
+</body>
+
+</html>
