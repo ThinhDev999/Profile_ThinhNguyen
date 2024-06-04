@@ -74,6 +74,9 @@
   margin-left: 20%;
 }
 .bg-stars.dart-mode .header .moon-icon {
+  text-shadow: 0 0 15px #2fcccc;
+}
+.bg-stars.dart-mode .header .moon-icon {
   color: #00ffff;
 }
 .bg-stars.light-mode .header .moon-icon {
@@ -97,8 +100,8 @@
 } */
 
 .bg-stars.dart-mode .star {
-  width: 1px;
-  height: 1px;
+  width: 3px;
+  height: 3px;
   background-color: #fff;
   position: absolute;
   animation: twinkle 1s infinite alternate;
@@ -303,39 +306,97 @@
   color: #ffffff;
 }
 
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    padding: 10px 0;
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon i {
+  font-size: 24px;
+}
+.bg-stars.dart-mode .menu-icon i {
+  color: #fff;
+}
+.bg-stars.light-mode .menu-icon i {
+  color: #000;
+}
+@media (max-width: 1000px) {
+  .header .logo {
+    font-size: 20px; /* Giảm kích thước font chữ của logo */
+  }
+  .profile-picture {
+    width: 60vw; /* Chiều rộng của ảnh đại diện là 60% chiều rộng của màn hình */
+    height: calc(
+      60vw * 1.1
+    ); /* Chiều cao của ảnh đại diện được tính dựa trên tỉ lệ 16:9 */
+    border-radius: 50%; /* Làm viền tròn */
+    margin: 20% auto; /* Canh giữa theo chiều ngang và căn lề trên dưới */
+  }
+  .info h1 {
+    font-size: 40px; /* Giảm kích thước của tiêu đề lớn */
   }
 
-  .nav {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
+  .info h3 {
+    font-size: 20px; /* Giảm kích thước của tiêu đề nhỏ */
   }
-
-  .main {
-    flex-direction: column;
-    padding-top: 80px;
+  .social-icons a i {
+    font-size: 20px;
   }
-
   .button-container {
-    flex-direction: column;
-    gap: 10px;
+    width: 220px;
+  }
+  .container {
+    padding: 0 2%; /* Căn lề bên trái và bên phải của container */
+  }
+  .main {
+    z-index: 0;
+    flex-direction: column-reverse;
+    /* text-align: star; */
   }
 
-  .image-container {
+  .menu-icon {
     display: block;
-    margin-top: 20px;
   }
 
-  .social-icons {
-    flex-direction: row;
-    justify-content: center;
+  .header .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* Điều chỉnh tùy thuộc vào chiều cao header */
+    left: 0px;
+
+    width: 100%;
+    height: 800px;
+
+    z-index: 1;
+  }
+  .bg-stars.dart-mode .header .nav {
+    background-color: rgba(0, 0, 0, 0.9); /* Màu nền của menu */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Tăng độ bóng */
+  }
+  .bg-stars.light-mode .header .nav {
+    background-color: rgba(238, 236, 236, 0.8); /* Màu nền của menu */
+    box-shadow: 0 4px 20px rgba(224, 222, 222, 0.855); /* Tăng độ bóng */
   }
 
-  .social-icons a {
-    margin: 0 5px;
+  .header #nav-menu a {
+    margin-top: 10px;
+    margin-left: 55px;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+  }
+
+  .header .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Hiển thị menu khi được nhấp vào */
+  .header .nav.active {
+    display: flex;
   }
 }

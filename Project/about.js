@@ -1,5 +1,38 @@
 $(document).ready(function () {
-    const navLinks = $('.header .nav a');
+
+
+    const toggleDarkModeButton = $('#toggleDarkMode');
+    const body = $('body');
+
+
+    let isDarkMode = false;
+    let StringIsDarkMode = "Dart";
+    function updateDarkModeState() {
+        // Lưu trạng thái chế độ tối vào localStorage
+        localStorage.setItem('isDarkModeEnabled', StringIsDarkMode);
+    }
+
+    const localStorageIsDarkMode = localStorage.getItem('isDarkModeEnabled');
+    // const isDarkMode = getDarkModeState();
+
+    if (localStorageIsDarkMode == "Dark") {
+
+        body.removeClass('light-mode');
+        body.addClass('dart-mode');
+        isDarkMode = false;
+        $('#about-link').addClass('clicked_toi');
+
+    } else if (localStorageIsDarkMode == "Light") {
+
+        body.removeClass('dart-mode');
+        body.addClass('light-mode');
+        isDarkMode = true;
+        $('#about-link').addClass('clicked_sang');
+
+    }
+
+    $('body').css('display', 'block');
+
 
 
     function createStar() {
@@ -75,35 +108,6 @@ $(document).ready(function () {
     });
 
 
-    const toggleDarkModeButton = $('#toggleDarkMode');
-    const body = $('body');
-
-    let isDarkMode = false;
-    let StringIsDarkMode = "Dart";
-    function updateDarkModeState() {
-        // Lưu trạng thái chế độ tối vào localStorage
-        localStorage.setItem('isDarkModeEnabled', StringIsDarkMode);
-    }
-
-    const localStorageIsDarkMode = localStorage.getItem('isDarkModeEnabled');
-    // const isDarkMode = getDarkModeState();
-
-    if (localStorageIsDarkMode == "Dark") {
-
-        body.removeClass('light-mode');
-        body.addClass('dart-mode');
-        isDarkMode = false;
-        $('#home-link').addClass('clicked_toi');
-
-    } else if (localStorageIsDarkMode == "Light") {
-
-        body.removeClass('dart-mode');
-        body.addClass('light-mode');
-        isDarkMode = true;
-        $('#home-link').addClass('clicked_sang');
-
-    }
-    $('body').css('display', 'block');
 
     toggleDarkModeButton.on('click', function () {
 
@@ -117,11 +121,7 @@ $(document).ready(function () {
             body.addClass('light-mode');
             StringIsDarkMode = "Light";
             updateDarkModeState();
-            $('#home-link').addClass('clicked_sang');
-            // $('#nav-menu').removeClass('nen_nav_menu_toi');
-            // $('#nav-menu').addClass('nen_nav_menu_sang');
-
-
+            $('#about-link').addClass('clicked_sang');
 
         } else {
 
@@ -129,10 +129,7 @@ $(document).ready(function () {
             body.addClass('dart-mode');
             StringIsDarkMode = "Dark";
             updateDarkModeState();
-            $('#home-link').addClass('clicked_toi');
-            // $('#nav-menu').removeClass('nen_nav_menu_sang');
-            // $('#nav-menu').addClass('nen_nav_menu_toi');
-
+            $('#about-link').addClass('clicked_toi');
 
         }
     });
