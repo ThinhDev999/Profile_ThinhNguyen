@@ -332,6 +332,19 @@
     border-radius: 50%; /* Làm viền tròn */
     margin: 20% auto; /* Canh giữa theo chiều ngang và căn lề trên dưới */
   }
+  .bg-stars.dart-mode .profile-picture {
+  box-shadow: 0 0 600px #00ffff; /* Thêm hiệu ứng bóng sáng màu #00FFFF */
+
+  border: 3px solid #00ffff;
+  /* filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5)); */
+}
+
+.bg-stars.light-mode .profile-picture {
+  box-shadow: 0 0 600px #2aabd5; /* Thêm hiệu ứng bóng sáng màu #00FFFF */
+
+  border: 3px solid #2aabd5;
+  /* filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5)); */
+}
   .info h1 {
     font-size: 28px; /* Giảm kích thước của tiêu đề lớn */
   }
