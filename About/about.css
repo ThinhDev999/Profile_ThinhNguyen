@@ -273,9 +273,7 @@
   }
 }
 
-/* Áp dụng hiệu ứng cho .
-
-*/
+/* Áp dụng hiệu ứng cho .dashed */
 .skills-header .dashed {
   border: 0;
   border-top: 2px dashed transparent; /* Đặt màu trong suốt cho nét đứt */
@@ -407,6 +405,7 @@
   }
 
   .header .logo {
+    font-size: 20px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);

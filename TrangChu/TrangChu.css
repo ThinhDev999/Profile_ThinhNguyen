@@ -5,6 +5,7 @@
   width: 100%;
   height: 100%;
   display: none;
+  overflow-x: hidden;
 }
 
 .bg-stars.dart-mode {
@@ -320,7 +321,11 @@
 .bg-stars.light-mode .menu-icon i {
   color: #000;
 }
+<<<<<<< HEAD
 @media (max-width: 1000px) {
+=======
+@media (max-width: 768px) {
+>>>>>>> 34dc35c9e3a107af66b0c7e8713fd068b2e9ad79
   .header .logo {
     font-size: 20px; /* Giảm kích thước font chữ của logo */
   }
@@ -332,18 +337,44 @@
     border-radius: 50%; /* Làm viền tròn */
     margin: 20% auto; /* Canh giữa theo chiều ngang và căn lề trên dưới */
   }
+<<<<<<< HEAD
   .info h1 {
     font-size: 40px; /* Giảm kích thước của tiêu đề lớn */
   }
 
   .info h3 {
     font-size: 20px; /* Giảm kích thước của tiêu đề nhỏ */
+=======
+  .bg-stars.dart-mode .profile-picture {
+  box-shadow: 0 0 600px #00ffff; /* Thêm hiệu ứng bóng sáng màu #00FFFF */
+
+  border: 3px solid #00ffff;
+  /* filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5)); */
+}
+
+.bg-stars.light-mode .profile-picture {
+  box-shadow: 0 0 600px #2aabd5; /* Thêm hiệu ứng bóng sáng màu #00FFFF */
+
+  border: 3px solid #2aabd5;
+  /* filter: drop-shadow(10px 10px 15px rgba(0, 0, 0, 0.5)); */
+}
+  .info h1 {
+    font-size: 28px; /* Giảm kích thước của tiêu đề lớn */
+  }
+  .info h2 {
+  font-size: 18px;
+  }
+
+  .info h3 {
+    font-size: 18px; /* Giảm kích thước của tiêu đề nhỏ */
+>>>>>>> 34dc35c9e3a107af66b0c7e8713fd068b2e9ad79
   }
   .social-icons a i {
     font-size: 20px;
   }
   .button-container {
     width: 220px;
+<<<<<<< HEAD
   }
   .container {
     padding: 0 2%; /* Căn lề bên trái và bên phải của container */
@@ -354,6 +385,17 @@
     /* text-align: star; */
   }
 
+=======
+  }
+  .container {
+    padding: 0 2%; /* Căn lề bên trái và bên phải của container */
+  }
+  .main {
+    z-index: 0;
+    flex-direction: column-reverse;
+    /* text-align: star; */
+  }
+>>>>>>> 34dc35c9e3a107af66b0c7e8713fd068b2e9ad79
   .menu-icon {
     display: block;
   }
@@ -400,3 +442,4 @@
     display: flex;
   }
 }
+
