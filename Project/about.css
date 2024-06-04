@@ -409,7 +409,6 @@
     transform: translateX(-50%);
   }
 
-  /* Hiển thị menu khi được nhấp vào */
   .header .nav.active {
     display: flex;
   }

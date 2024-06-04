@@ -118,8 +118,7 @@ $(document).ready(function () {
             StringIsDarkMode = "Light";
             updateDarkModeState();
             $('#home-link').addClass('clicked_sang');
-            // $('#nav-menu').removeClass('nen_nav_menu_toi');
-            // $('#nav-menu').addClass('nen_nav_menu_sang');
+
 
 
 
@@ -130,8 +129,7 @@ $(document).ready(function () {
             StringIsDarkMode = "Dark";
             updateDarkModeState();
             $('#home-link').addClass('clicked_toi');
-            // $('#nav-menu').removeClass('nen_nav_menu_sang');
-            // $('#nav-menu').addClass('nen_nav_menu_toi');
+
 
 
         }
