@@ -397,7 +397,8 @@
   border-radius: 5px;
   font-weight: bolder;
   color: #fff;
-  width: 10%;
+  /* width: 10%; */
+  max-width: 50px;
 }
 
 .button-close p:hover {
