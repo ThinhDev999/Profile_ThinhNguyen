@@ -122,6 +122,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  padding: 0 5%;
   /* padding: 0px 0px 0px 5%; */
 }
 .bg-stars.dart-mode .main {
@@ -134,9 +135,11 @@
 
 .container {
   display: flex;
-  justify-content: space-between; /* Căn các phần tử theo cả hai bên */
-  align-items: center; /* Căn các phần tử theo trục dọc */
+  justify-content: space-between;
+  align-items: center;
+
   padding: 0 0 0 2%;
+  /* margin: auto; */
 }
 
 .info {
@@ -322,7 +325,7 @@
   color: #000;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .header .logo {
     font-size: 20px; /* Giảm kích thước font chữ của logo */
   }

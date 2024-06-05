@@ -1,0 +1,483 @@
+.bg-stars {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.bg-stars.dart-mode {
+  background-color: #000;
+}
+.bg-stars.light-mode {
+  background-color: #fff;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 5%;
+}
+.bg-stars.dart-mode .header {
+  background-color: rgb(57, 54, 54, 0.3);
+}
+
+.bg-stars.light-mode .header {
+  background-color: rgb(237, 237, 237, 0.3);
+}
+
+.header .logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+.bg-stars.dart-mode .header .logo {
+  color: #fff;
+}
+.bg-stars.dart-mode .logo .thinh {
+  color: #00ffff; /* Thay đổi màu chữ thành màu xanh cho từ "thinh" */
+}
+
+.bg-stars.light-mode .header .logo {
+  color: #000;
+}
+.bg-stars.light-mode .logo .thinh {
+  color: #2aabd5; /* Thay đổi màu chữ thành màu xanh cho từ "thinh" */
+}
+
+.header .nav {
+  display: flex;
+  align-items: center;
+  margin-right: -20%;
+}
+
+.header .nav a {
+  font-size: 18px;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  /* In đậm chữ */
+}
+.bg-stars.dart-mode .header .nav a {
+  color: #fff;
+}
+.bg-stars.light-mode .header .nav a {
+  color: #000;
+}
+
+.bg-stars.dart-mode .header .nav a:hover {
+  color: #00ffff;
+}
+.bg-stars.light-mode .header .nav a:hover {
+  color: #2aabd5;
+}
+
+.header .moon-icon {
+  font-size: 24px;
+  cursor: pointer;
+  margin-left: 20%;
+}
+.bg-stars.dart-mode .header .moon-icon {
+  text-shadow: 0 0 15px #2fcccc;
+}
+.bg-stars.dart-mode .header .moon-icon {
+  color: #00ffff;
+}
+.bg-stars.light-mode .header .moon-icon {
+  color: #000;
+}
+
+/* click vao chu  thay doi mau phan   <nav class="nav"> */
+.bg-stars.dart-mode .clicked_toi {
+  color: #00ffff !important; /* Màu cam sáng */
+}
+
+.bg-stars.light-mode .clicked_sang {
+  color: #2aabd5 !important; /* Màu cam sáng */
+}
+
+/* #night-sky {
+  width: 100%;
+  height: 100%;
+   background-color: #000; 
+  position: relative;
+} */
+
+.bg-stars.dart-mode .star {
+  width: 1px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  animation: twinkle 1s infinite alternate;
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.main {
+  margin-bottom: 50px;
+}
+.bg-stars.dart-mode .main {
+  color: #ffffff;
+}
+
+.bg-stars.light-mode .main {
+  color: #000;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-icon i {
+  font-size: 24px;
+}
+.bg-stars.dart-mode .menu-icon i {
+  color: #fff;
+}
+.bg-stars.light-mode .menu-icon i {
+  color: #000;
+}
+
+.main {
+  font-family: "Arial", sans-serif;
+  max-width: 100%;
+  /* max-width: 800px;
+  margin: 0 auto;
+  padding: 20px; */
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.title-portfolio {
+  width: 70%;
+  margin: auto;
+  margin-top: 50px;
+}
+.title-portfolio h1 {
+  font-size: 30px;
+}
+.bg-stars.dart-mode .title-portfolio h1 {
+  color: #00ffff;
+}
+.bg-stars.light-mode .title-portfolio h1 {
+  color: #2aabd5;
+}
+
+.project {
+  /* background-color: #1a1a1a;  */
+  width: 70%;
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  margin: auto;
+}
+
+.item {
+  padding: 15px 18px;
+  border-radius: 10px;
+  padding-bottom: 25px;
+}
+.bg-stars.dart-mode .item {
+  background-color: #2b2b2b;
+}
+.bg-stars.light-mode .item {
+  background-color: rgba(255, 255, 255, 0.855);
+  box-shadow: 0px 4px 20px rgba(195, 195, 195, 0.855);
+}
+.item img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.bg-stars.dart-mode h2 {
+  color: #ffffff; /* Màu chữ */
+  margin-top: 0.5rem;
+}
+.bg-stars.light-mode h2 {
+  color: #000; /* Màu chữ */
+  margin-top: 0.5rem;
+}
+
+.tech-tools {
+  display: flex;
+}
+.bg-stars.dart-mode .csharp,
+.bg-stars.dart-mode .unity {
+  background-color: rgb(83, 82, 82, 0.3);
+}
+.bg-stars.light-mode .csharp,
+.bg-stars.light-mode .unity {
+  background-color: rgba(224, 224, 224, 0.3);
+}
+.csharp,
+.unity {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+
+  border-radius: 6px;
+  padding: 0px 10px;
+}
+.csharp,
+.unity {
+  font-weight: bold;
+}
+.csharp img,
+.unity img {
+  width: 23px;
+  height: 23px;
+  margin-right: 5px;
+}
+
+.description {
+  max-width: 300px; /* Giới hạn chiều rộng của mô tả */
+  max-height: 2.5em; /* Giới hạn chiều cao của mô tả tối đa 2 dòng (mỗi dòng khoảng 1.25em) */
+  overflow: hidden; /* Ẩn nội dung dư thừa */
+  text-overflow: ellipsis; /* Hiển thị dấu elipsis (...) nếu văn bản vượt quá kích thước được cho phép */
+  white-space: normal; /* Hiển thị văn bản trên nhiều dòng */
+  display: -webkit-box; /* Dùng cho Safari, iOS và Android 4.4 */
+  -webkit-line-clamp: 2; /* Số dòng hiển thị tối đa */
+  -webkit-box-orient: vertical; /* Chiều dọc */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.button-link {
+  margin-top: 10px;
+  display: flex;
+}
+.button-link .details p {
+  margin-right: 5px;
+}
+.button-link a,
+.details {
+  display: flex;
+
+  padding: 0px 10px;
+  border-radius: 5px;
+  margin-right: 10px;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 700;
+  height: 40px;
+}
+.bg-stars.light-mode .button-link a {
+  background-color: rgba(166, 165, 165, 0.3);
+  color: #000; /* Màu chữ */
+}
+.bg-stars.dart-mode .button-link a {
+  background-color: rgba(87, 87, 87, 0.5);
+  color: #ffff; /* Màu chữ */
+}
+
+.bg-stars.dart-mode .button-link .details {
+  background-color: #1ee0e0;
+}
+.bg-stars.dart-mode .button-link .details:hover {
+  background-color: #088888;
+}
+
+.bg-stars.light-mode .button-link .details {
+  background-color: #2aabd5;
+  color: #fff;
+}
+.bg-stars.light-mode .button-link .details:hover {
+  background-color: #187b9b;
+}
+.bg-stars.dart-mode .button-link .github:hover {
+  background-color: #000000; /* Màu nền hover */
+  color: #fff;
+}
+.bg-stars.light-mode .button-link .github:hover {
+  background-color: #000000; /* Màu nền hover */
+  color: #fff;
+}
+.bg-stars.dart-mode .button-link .itchIo:hover {
+  background-color: #ffffff; /* Màu nền hover */
+  color: #fa5c5c;
+}
+.bg-stars.light-mode .button-link .itchIo:hover {
+  background-color: #ffffff; /* Màu nền hover */
+  color: #fa5c5c;
+  border: solid 1px #fa5c5c;
+}
+
+.button-link a i {
+  margin-right: 5px;
+}
+/* Modal hiển thị chi tiết */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  justify-content: center;
+  align-items: center;
+  padding: 10px 18px 10px 18px;
+}
+.bg-stars.dart-mode .modal {
+  background-color: rgba(94, 92, 92, 0.8);
+  backdrop-filter: blur(2px);
+  color: #fff;
+}
+.bg-stars.light-mode .modal {
+  background-color: rgba(223, 223, 223, 0.8);
+  backdrop-filter: blur(2px);
+  /* color: #fff; */
+}
+.modal-content {
+  background-color: #757171;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  position: relative;
+}
+.bg-stars.dart-mode .modal-content {
+  background-color: rgb(41, 57, 62);
+}
+.bg-stars.light-mode .modal-content {
+  background-color: rgb(255, 255, 255);
+}
+.modal-content img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.modal-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-title i {
+  color: rgba(182, 60, 29, 0.8);
+  font-size: 22px;
+}
+.modal-title i:hover {
+  padding: 1px 5px 1px 5px;
+  border-radius: 3px;
+  background-color: rgba(225, 186, 176, 0.8);
+}
+.modal-title .close {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.button-close {
+  text-align: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.button-close p {
+  background-color: #d71010;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: bolder;
+  color: #fff;
+  width: 10%;
+}
+
+.button-close p:hover {
+  background-color: #605757;
+}
+.modal-tech-tools {
+  display: flex;
+  margin-top: 1rem;
+}
+.modal-tech-tools img {
+  width: 40px;
+  width: 23px;
+  height: 23px;
+  margin-right: 5px;
+}
+
+#modalDescription p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .main {
+    z-index: 0;
+    /* flex-direction: column-reverse; */
+    /* text-align: star; */
+  }
+  .menu-icon {
+    display: block;
+  }
+
+  .header .nav {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* Điều chỉnh tùy thuộc vào chiều cao header */
+    left: 0px;
+
+    width: 100%;
+    height: 800px;
+
+    z-index: 1;
+  }
+  .bg-stars.dart-mode .header .nav {
+    background-color: rgba(0, 0, 0, 0.9); /* Màu nền của menu */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Tăng độ bóng */
+  }
+  .bg-stars.light-mode .header .nav {
+    background-color: rgba(238, 236, 236, 0.8); /* Màu nền của menu */
+    box-shadow: 0 4px 20px rgba(224, 222, 222, 0.855); /* Tăng độ bóng */
+  }
+  .header #nav-menu a {
+    margin-top: 10px;
+    margin-left: 55px;
+    margin-bottom: 10px;
+    text-align: left;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+  }
+
+  .header .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .header .nav.active {
+    display: flex;
+  }
+}
+@media (max-width: 1500px) {
+  .project {
+    margin: auto;
+    width: 100%;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(310px, 1fr)
+    ); /* Sử dụng auto-fill để tự động điều chỉnh số lượng phần tử trên 1 hàng, minmax(250px, 1fr) để đảm bảo rằng mỗi phần tử sẽ có ít nhất 250px và tối đa là 1 phần tử trên mỗi hàng */
+  }
+  .title-portfolio {
+    width: 100%;
+  }
+}
