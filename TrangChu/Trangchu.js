@@ -57,10 +57,10 @@ $(document).ready(function () {
 
     $('#downloadButton').on('click', function (event) {
         event.preventDefault(); // Prevent default link action
-        var url = 'cv.pdf'; // Specify the URL of your PDF file here
+        var url = '../TaiNguyen/CV_NGUYEN VAN THNH.pdf'; // Specify the URL of your PDF file here
         var a = $('<a>').attr({
             href: url,
-            download: 'cv.pdf'
+            download: '../TaiNguyen/CV_NGUYEN VAN THNH.pdf'
         });
         $('body').append(a);
         a[0].click();
