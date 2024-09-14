@@ -298,7 +298,7 @@
   border-right: solid 3px #2aabd5;
 }
 .button2 {
-  border-radius: 0px 50px 50px 0px;
+  border-radius: 50px 50px 50px 50px;
 }
 
 .bg-stars.dart-mode .button:hover {

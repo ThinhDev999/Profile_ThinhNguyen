@@ -70,7 +70,7 @@ $(document).ready(function () {
     // Function to handle view button click
     $('#viewButton').on('click', function (event) {
         event.preventDefault(); // Prevent default link action
-        var url = 'cv.pdf'; // Specify the URL of your PDF file here
+        var url = '../TaiNguyen/CV_NGUYEN VAN THNH.pdf'; // Specify the URL of your PDF file here
         window.open(url, '_blank'); // Open in new tab
     });
 
