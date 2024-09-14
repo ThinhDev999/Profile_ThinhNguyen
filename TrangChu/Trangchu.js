@@ -29,7 +29,7 @@ $(document).ready(function () {
     createStars();
 
     let textIndex = 0; // Index của chuỗi hiện tại
-    const texts = ["Game Developer", "Unity Developer"]; // Mảng các chuỗi bạn muốn hiển thị
+    const texts = ["Web Developer", "FrontEnd - BackEnd Developer"]; // Mảng các chuỗi bạn muốn hiển thị
     let index = 0;
 
     function typeWriter() {
