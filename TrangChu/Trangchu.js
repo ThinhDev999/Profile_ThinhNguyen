@@ -57,10 +57,10 @@ $(document).ready(function () {
 
     $('#downloadButton').on('click', function (event) {
         event.preventDefault(); // Prevent default link action
-        var url = '../TaiNguyen/CV_NGUYEN VAN THNH.pdf'; // Specify the URL of your PDF file here
+        var url = 'Profile_ThinhNguyen/TaiNguyen/CV_NGUYEN VAN THNH.pdf'; // Specify the URL of your PDF file here
         var a = $('<a>').attr({
             href: url,
-            download: '../TaiNguyen/CV_NGUYEN VAN THNH.pdf'
+            download: 'Profile_ThinhNguyen/TaiNguyen/CV_NGUYEN VAN THNH.pdf'
         });
         $('body').append(a);
         a[0].click();
@@ -70,7 +70,7 @@ $(document).ready(function () {
     // Function to handle view button click
     $('#viewButton').on('click', function (event) {
         event.preventDefault(); // Prevent default link action
-        var url = '../TaiNguyen/CV_NGUYEN VAN THNH.pdf'; // Specify the URL of your PDF file here
+        var url = 'Profile_ThinhNguyen/TaiNguyen/CV_NGUYEN VAN THNH.pdf'; // Specify the URL of your PDF file here
         window.open(url, '_blank'); // Open in new tab
     });
 
